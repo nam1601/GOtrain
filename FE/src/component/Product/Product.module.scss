@@ -1,0 +1,94 @@
+@import '../GlobalStyles/GlobalStyles.scss';
+.wrapper {
+    position: relative;
+    max-width: 400px;
+    height: 60%;
+    border-radius: var(--Border-Radius);
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 75%) 0px 2px 12px;
+    padding: 12px 28px;
+    margin-right: 40px;
+    @include mobile {
+        margin-top: 450px;
+        margin-bottom: 40px;
+        margin-right: 0;
+        min-height: 70%;
+    }
+    .block {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: var(--Yellow);
+        top: -300px;
+        left: -300px;
+    }
+    .product__header {
+        width: 100%;
+        z-index: 100000;
+        position: relative;
+        img {
+            // width: 40px;
+            height: 40px;
+        }
+        h4 {
+            margin-bottom: 12px;
+        }
+    }
+    .content-wrapper {
+        z-index: 1000;
+        width: 100%;
+
+        height: calc(100% - 90px);
+        overflow: auto;
+        overflow-x: hidden;
+        .content {
+            position: relative;
+            .product_item {
+                margin-bottom: 80px;
+                .product__post {
+                    margin: 0 4px;
+                    width: calc(100% - 8px);
+                    height: 360px;
+                    border-radius: var(--Border-Radius);
+                    overflow: hidden;
+                    box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+                    img {
+                        width: 80%;
+                        transform: rotate(-25deg);
+                        box-shadow: rgb(0 0 0 / 12%) 0px;
+                    }
+                }
+                h3 {
+                    margin: 20px 0;
+                }
+                p {
+                    color: #666;
+                    font-size: 1.4rem;
+                }
+                .product__add {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span {
+                        display: block;
+                        font-weight: 600;
+                        font-size: 1.8rem;
+                    }
+                    button {
+                        display: flex;
+                        align-items: center;
+                        border-radius: 28px;
+                        padding: 6px 12px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 1.8rem;
+                        background-color: var(--Yellow);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

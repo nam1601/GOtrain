@@ -1,0 +1,143 @@
+@import 'normalize.css';
+:root {
+    --font-family: 'Rubik', sans-serif;
+    --White: #ffffff;
+    --Black: #303841l;
+    --Gray: #777777;
+    --Yellow: #f6c90e;
+    --Border-Radius: 28px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    overflow-y: overlay;
+    font-family: var(--font-family);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: var(--text-color);
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
+}
+//Fonts emmbeded
+
+// @font-face {
+//     font-family: Rubik;
+//     src: url('/assets/fonts/Rubik-light.ttf');
+//     font-weight: 400;
+// }
+// @font-face {
+//     font-family: Rubik;
+//     src: url('/assets/fonts/Rubik-Regular.ttf');
+//     font-weight: 500;
+// }
+// @font-face {
+//     font-family: Rubik;
+//     src: url('/assets/fonts/Rubik-Bold.ttf');
+//     font-weight: 600;
+// }
+body {
+    .tippy-box {
+        background-color: #545454eb;
+        color: #fff;
+        padding-top: 3px;
+        border-radius: 8px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.2rem;
+        margin: 0;
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
+    .tippy-arrow {
+        color: #545454eb;
+    }
+}
+
+.yellow-background {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-color: var(--Yellow);
+    border-top-left-radius: 900px 350px;
+}
+@mixin mobile {
+    @media only screen and (max-width: 850px) {
+        @content;
+    }
+}
+.App {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-y: scroll;
+        padding: 0 20px;
+    }
+}
+/* Webkit (Safari, Chrome, Opera) */
+::-webkit-scrollbar {
+    width: 0.5em; /* Đặt chiều rộng của thanh trượt */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Đặt màu nền của "nút trượt" */
+}
+
+/* Firefox */
+::-moz-scrollbar {
+    width: 0.5em; /* Đặt chiều rộng của thanh trượt */
+}
+
+::-moz-scrollbar-thumb {
+    background-color: transparent; /* Đặt màu nền của "nút trượt" */
+}
+
+/* Microsoft Edge and IE */
+::-ms-scrollbar {
+    width: 0.5em; /* Đặt chiều rộng của thanh trượt */
+}
+
+::-ms-scrollbar-thumb {
+    background-color: transparent; /* Đặt màu nền của "nút trượt" */
+}
